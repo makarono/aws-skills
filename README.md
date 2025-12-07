@@ -1,6 +1,6 @@
 # AWS Skills for Claude Code
 
-Claude Code plugins for AWS development with specialized knowledge and MCP server integrations, including CDK, serverless architecture, cost optimization, and Bedrock AgentCore for AI agent deployment.
+Claude Code plugins for AWS development with specialized knowledge and MCP server integrations, including CDK, CloudFormation, serverless architecture, cost optimization, and Bedrock AgentCore for AI agent deployment.
 
 ## Plugins
 
@@ -54,6 +54,20 @@ AWS Bedrock AgentCore comprehensive expert for deploying and managing AI agents.
 - Browser service for web automation
 - Observability for tracing and monitoring
 
+### 5. AWS CloudFormation Plugin
+
+AWS CloudFormation expert for infrastructure as code using native templates.
+
+**Features**:
+- CloudFormation template development best practices
+- Template validation and syntax checking
+- Comprehensive CloudFormation patterns reference
+- Stack management and update strategies
+- Nested stacks and cross-stack references
+
+**Integrated MCP Server**:
+- AWS CloudFormation MCP (stdio)
+
 ## Installation
 
 Add the marketplace to Claude Code:
@@ -69,6 +83,7 @@ Install plugins individually:
 /plugin install aws-cost-ops@aws-skills
 /plugin install serverless-eda@aws-skills
 /plugin install aws-agentic-ai@aws-skills
+/plugin install aws-cloudformation@aws-skills
 ```
 
 ## Core CDK Principles
@@ -207,6 +222,26 @@ Monitor agent performance:
 Configure observability for my AgentCore runtime with CloudWatch dashboards
 ```
 
+### CloudFormation Development
+
+Create CloudFormation templates:
+
+```
+Create a CloudFormation template for a VPC with public and private subnets
+```
+
+Validate and preview changes:
+
+```
+Validate my CloudFormation template and create a change set to preview changes
+```
+
+Implement best practices:
+
+```
+Add proper IAM roles and encryption to my CloudFormation stack
+```
+
 ## Structure
 
 ```
@@ -224,6 +259,10 @@ Configure observability for my AgentCore runtime with CloudWatch dashboards
 │   │   │   └── cdk-patterns.md
 │   │   └── scripts/
 │   │       └── validate-stack.sh
+│   ├── aws-cloudformation/           # CloudFormation skill
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── cloudformation-patterns.md
 │   ├── aws-cost-operations/          # Cost & operations skill
 │   │   ├── SKILL.md
 │   │   └── references/

@@ -5,8 +5,8 @@
     "email": "me@kane.mx"
   },
   "metadata": {
-    "description": "AWS development skills for Claude Code including CDK, serverless architecture, cost optimization, and Bedrock AgentCore for AI agent deployment",
-    "version": "2.0.0"
+    "description": "AWS development skills for Claude Code including CDK, CloudFormation, serverless architecture, cost optimization, and Bedrock AgentCore for AI agent deployment",
+    "version": "2.1.0"
   },
   "plugins": [
     {
@@ -128,6 +128,37 @@
       "skills": [
         "./skills/aws-agentic-ai"
       ]
+    },
+    {
+      "name": "aws-cloudformation",
+      "description": "AWS CloudFormation expert for infrastructure as code using native templates. Covers template development, stack management, nested stacks, and CloudFormation best practices for YAML/JSON templates",
+      "version": "1.0.0",
+      "author": {
+        "name": "Kane Zhu",
+        "email": "me@kane.mx"
+      },
+      "homepage": "https://github.com/zxkane/aws-skills",
+      "repository": "https://github.com/zxkane/aws-skills",
+      "license": "MIT",
+      "keywords": ["aws", "cloudformation", "infrastructure", "iac", "templates", "stacks"],
+      "category": "development",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/aws-cloudformation"
+      ],
+      "mcpServers": {
+        "cfn": {
+          "type": "stdio",
+          "command": "uvx",
+          "args": [
+            "awslabs.cloudformation-mcp-server@latest"
+          ],
+          "env": {
+            "FASTMCP_LOG_LEVEL": "ERROR"
+          }
+        }
+      }
     }
   ]
 }
